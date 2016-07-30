@@ -14,15 +14,14 @@ public class Projectproject {
         if (port != null) {
             int portInt = Integer.parseInt(port);
             Spark.port(portInt);
-
-            Spark.staticFileLocation("/webfiles");
-
-            Spark.get("/hello", (request, response) -> {
-                return "<html> Hello <b> Buddy </b> <br/>" +
-                        "Please got to /project.html" +
-                        "</html>";
-            });
-
         }
+
+        Spark.staticFileLocation("/webfiles");
+
+        Spark.get("/hello", (request, response) -> {
+            return "<html> Hello <b> Buddy </b> <br/>" +
+                    "Please got to /project.html" +
+                    "</html>";
+        });
     }
 }
